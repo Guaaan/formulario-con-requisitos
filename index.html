@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="card">
+                <div class="card-header">
+                    <h1>Payment form example</h1>
+                </div>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-12 col-12">
+                            <div class="alert alert-danger d-none" role="alert">
+                                Some fields are missing
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-5">
+                            <div class="form-group">
+                                <label for="text">Card#</label>
+                                <input type="text" pattern="[0-9]{13,16}" class="form-control" id="cardnumber" placeholder="XXXXXXXXXXXXXXXXX" />
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label for="text">CVC #</label>
+                                <input type="text" pattern="[0-9]{3}" class="form-control" id="cvc" placeholder="0000" />
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="text">Amount</label><br />
+                                <input type="text" pattern="[0-9]+" class="form-control" id="amount" placeholder="Amount" />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="text">First Name</label><br />
+                                <input type="text" pattern="[a-zA-Z0-9]+" id="fName" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="text">Last Name</label><br />
+                                <input type="text" pattern="[a-zA-Z0-9]+" id="lName" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="text">City</label>
+                                <input type="text"  id="city" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label for="text">State</label>
+                                <select name="city" id="state" class="form-control">
+                                    <option value="CLP">Chile</option>
+                                    <option value="ARG">Argentina</option>
+                                    <option value="VEN">Venezuela</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label for="text">Postal Code</label><br />
+                                <input type="text" pattern="[0-9]+" id="postalCode" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="text">We accept</label>
+
+                                <div class="col-md-6 bg-secondary">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline1"><i
+                                                class="fab fa-cc-amex"></i></label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline2"><i
+                                                class="fab fa-cc-diners-club"></i></label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline3" name="customRadioInline1"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline3"><i
+                                                class="fab fa-cc-mastercard"></i></label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline4" name="customRadioInline1"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadioInline4"><i
+                                                class="fab fa-cc-visa"></i></label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="text">Message</label><br />
+                                <textarea name="" id="message" cols="100" rows="6" placeholder="Mensaje"
+                                    class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary float-right mx-1">enviar</button>
+                    <button class="btn btn-secondary float-right mx-1" type="reset">cancel</button>
+                    
+                </div>
+            </div>        
+        </form>
+    </div>
+    <script src="/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
